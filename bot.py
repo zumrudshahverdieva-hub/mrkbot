@@ -22,10 +22,10 @@ ADMIN_ID = int(os.getenv("ADMIN_ID", "1319442767"))
 
 
 
-print("DEBUG BOT_TOKEN exists:", BOT_TOKEN is not None)
-print("DEBUG BOT_TOKEN repr:", repr(BOT_TOKEN[:15] + "..." if BOT_TOKEN else BOT_TOKEN))
-print("DEBUG BOT_TOKEN length:", len(BOT_TOKEN) if BOT_TOKEN else 0)
-print("DEBUG ADMIN_ID:", ADMIN_ID)
+print("DEBUG ENV KEYS:", sorted([k for k in os.environ.keys() if "TOKEN" in k or "ADMIN" in k or "RAILWAY" in k]))
+print("DEBUG BOT_TOKEN exists:", "BOT_TOKEN" in os.environ)
+print("DEBUG BOT_TOKEN repr:", repr(os.environ.get("BOT_TOKEN")))
+print("DEBUG ADMIN_ID raw:", repr(os.environ.get("ADMIN_ID")))
 
 DB_FILE = Path("message_links.json")
 

@@ -16,9 +16,9 @@ from telegram.ext import (
 # =========================
 
 import os
-BOT_TOKEN = os.getenv("8756837734:AAH1IvNHQToW1Lq0gd4Mai0IDC_qAVsFQgM")
-ADMIN_ID = int(os.getenv("ADMIN_ID", "1319442767"))
 
+BOT_TOKEN = (os.getenv("8756837734:AAG3wO9zcsFNvpYbpbnaKRleAzpLDVNddpk") or "").strip()
+ADMIN_ID = int((os.getenv("ADMIN_ID") or "1319442767").strip())
 
 
 

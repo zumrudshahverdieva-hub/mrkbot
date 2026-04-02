@@ -14,8 +14,10 @@ from telegram.ext import (
 # =========================
 # НАСТРОЙКИ
 # =========================
-BOT_TOKEN = "8756837734:AAH1IvNHQToW1Lq0gd4Mai0IDC_qAVsFQgM"
-ADMIN_ID =  1319442767  # ВСТАВЬ СЮДА СВОЙ TELEGRAM USER ID
+
+import os
+BOT_TOKEN = os.getenv("8756837734:AAH1IvNHQToW1Lq0gd4Mai0IDC_qAVsFQgM")
+ADMIN_ID = int(os.getenv("ADMIN_ID", "1319442767"))
 
 DB_FILE = Path("message_links.json")
 

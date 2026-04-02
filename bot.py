@@ -19,6 +19,14 @@ import os
 BOT_TOKEN = os.getenv("8756837734:AAH1IvNHQToW1Lq0gd4Mai0IDC_qAVsFQgM")
 ADMIN_ID = int(os.getenv("ADMIN_ID", "1319442767"))
 
+
+
+
+print("DEBUG BOT_TOKEN exists:", BOT_TOKEN is not None)
+print("DEBUG BOT_TOKEN repr:", repr(BOT_TOKEN[:15] + "..." if BOT_TOKEN else BOT_TOKEN))
+print("DEBUG BOT_TOKEN length:", len(BOT_TOKEN) if BOT_TOKEN else 0)
+print("DEBUG ADMIN_ID:", ADMIN_ID)
+
 DB_FILE = Path("message_links.json")
 
 logging.basicConfig(
